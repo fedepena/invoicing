@@ -1,9 +1,12 @@
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <title>Encuesta Software de Facturación Electrónica</title>
-        <style type="text/css"> html{ margin: 0; height: 100%; overflow: hidden; } iframe{ position: absolute; left:0; right:0; bottom:0; top:0; border:0; } </style>         
+        <style type="text/css">
+        html { margin: 0; height: 100%; overflow: hidden; }
+        iframe{ position: absolute; left:0; right:0;   bottom:0; top:0; border:0; }
+        </style>
     </head>
     <body>
         <!-- Google Analytics -->
@@ -17,18 +20,34 @@
               r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
               a.appendChild(r);
           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-      </script>
+        </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2211383-7"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-2211383-7');
       </script>
-        <!-- /Google Analytics -->
-        <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://federicopena.typeform.com/to/byUDKn"></iframe>
-        <script type="text/javascript" src="https://embed.typeform.com/embed.js"></script>
+      <!-- /Google Analytics -->
+      <div id="my-embedded-typeform"></div>
+      <script src="https://embed.typeform.com/embed.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        window.addEventListener("DOMContentLoaded", function() {
+          var el = document.getElementById('my-embedded-typeform');
+
+          // When instantiating a widget embed, you must provide the DOM element
+          // that will contain your typeform, the URL of your typeform, and your
+          // desired embed settings
+          window.typeformEmbed.makeWidget(el, "https://fedepena.typeform.com/to/byUDKn", {
+            hideFooter: true,
+            hideHeaders: true,
+            opacity: 0,
+            onSubmit: function () {
+                hj('vpv', 'Aqui esta el pa');
+            }
+          });
+        });
+      </script>
     </body>
 </html>
