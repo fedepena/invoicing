@@ -41,7 +41,7 @@
             opacity: 0,
             onSubmit: function () {
                 hj('vpv', '/survey-done');
-                ga('send', 'pageview', '/survey-done');
+                gtag('config', 'UA-2211383-7', {'page_title':'Survey completed','page_path':'/survey-done'})
             }
           });
         });
